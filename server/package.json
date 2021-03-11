@@ -20,7 +20,8 @@
     "dev": "nodemon --exec \"npm run start\"",
     "debug": "nodemon --exec \"npm run inspect\"",
     "generate-json-validators": "bash generate-validators.sh",
-    "generate-secret": "npm run prestart && node --es-module-specifier-resolution=node dist/secret.js"
+    "generate-secret": "npm run prestart && node --es-module-specifier-resolution=node dist/secret.js",
+    "nuke": "rm -rf node_modules dist"
   },
   "files": [
     "dist/*",

@@ -12,10 +12,13 @@
   "scripts": {
     "build": "cp -r server/decks decks && npm run buildServer && npm run buildClient",
     "buildServer": "npm explore @massivedecks/server -- npm run build",
-    "buildClient": "npm explore @massivedecks/client -- npm run build"
+    "buildClient": "npm explore @massivedecks/client -- npm run build",
+    "nuke": "npm run nukeServer && npm run nukeClient && rm -rf node_modules decks package-lock.json",
+    "nukeServer": "cd server && npm run nuke",
+    "nukeClient": "cd client && npm run nuke"
   },
   "dependencies": {
-    "@massivedecks/server": "file:./server",
-    "@massivedecks/client": "file:./client"
+    "@massivedecks/client": "file:client",
+    "@massivedecks/server": "file:server"
   }
 }
