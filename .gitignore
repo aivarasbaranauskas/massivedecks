@@ -4,6 +4,7 @@
 # Generated files.
 dist/
 /decks/
+/package-lock.json
 
 # Package management cruft.
 elm-stuff/
